@@ -1,0 +1,41 @@
+{
+	"name": "fmentor-nft-qunit",
+	"version": "1.0.0",
+	"description": "nft preview card component using qunit",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"sass-dev": "sass --watch scss/main.scss css/main.css",
+		"sass-prod": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
+		"postcss": "postcss css/main.css -o css/main.css --use autoprefixer --no-map",
+		"prettier": "prettier --write .",
+		"dev": "run-s sass-dev",
+		"lint": "run-s prettier",
+		"test": "qunit",
+		"build": "run-s lint sass-prod postcss"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/al3xback/fmentor-nft-qunit.git"
+	},
+	"author": "alex <al3xback@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/al3xback/fmentor-nft-qunit/issues"
+	},
+	"homepage": "https://github.com/al3xback/fmentor-nft-qunit#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.16",
+		"axios": "^1.6.5",
+		"jsdom": "^23.0.1",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.31",
+		"postcss-cli": "^10.1.0",
+		"prettier": "^2.8.8",
+		"qunit": "^2.20.0",
+		"sass": "^1.62.1"
+	},
+	"browserslist": [
+		"defaults"
+	]
+}
