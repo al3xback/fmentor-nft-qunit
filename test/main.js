@@ -7,7 +7,8 @@ const { test } = QUnit;
 const url = 'https://al3xback.github.io/fmentor-nft-qunit/';
 
 const getData = () => {
-	return axios.get(url)
+	return axios
+		.get(url)
 		.then((res) => {
 			const { document } = new JSDOM(res.data).window;
 			return document;
